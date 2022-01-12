@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 import django_heroku
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'db5qo4u8tq8o5p',
+        'USER':'mznehxqtqrcwjq',
+        'HOST':'ec2-3-209-234-80.compute-1.amazonaws.com',
+        'PORT':'5432',
+        'PASSWORD':'b6214aee41126ba0d932124db6d8ed35fe18d2fdcc8184b5d126a6c6a5d5cff7'
     }
 }
 

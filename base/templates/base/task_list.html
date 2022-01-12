@@ -1,4 +1,4 @@
-<!-- {% extends 'base.html' %} -->
+{% extends 'base.html' %}
 
 {% block title %}
 Task Lists
@@ -7,15 +7,17 @@ Task Lists
 {% block content %}
   <table class="table table-striped">
     <tr>
-      <th class="text-center">Items</th>
+      <th class="text-center">ITEMS TO BUY </th>
     </tr>
     <tr>
     {% for task in tasks %}
-    <td >{{ task.title }}</td>
+    <td >{{ task.title }}</td> 
     </tr>
+    <tr>
     {% empty %}
-    <h3>No Items</h3>
+    <td class="text-center"> <h3>No Items</h3></td>
     {% endfor %}
+    </tr>
   </table>
 
 {% endblock%}
