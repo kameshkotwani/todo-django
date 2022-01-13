@@ -7,11 +7,14 @@ Task Lists
 {% block content %}
   <table class="table table-striped">
     <tr>
-      <th class="text-center">ITEMS TO BUY </th>
+      <th class="text-center" colspan="2">ITEMS TO BUY </th>
+      <!-- <th class="text-center"></th> -->
+
     </tr>
     <tr>
     {% for task in tasks %}
     <td >{{ task.title }}</td> 
+    <td ><a href="{% url 'task' task.id %}">View</a></td> 
     </tr>
     <tr>
     {% empty %}
