@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Task Form</h1>
+<div class="m-1 p-1">
+    <a href="{% url 'tasks' %}">
+      <button class="btn btn-warning btn-hover">go back</button>
+    </a>
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary m-2 p-2">submit</button>
+</form>
 {% endblock %}
